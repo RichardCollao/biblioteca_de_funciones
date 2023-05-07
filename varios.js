@@ -1,12 +1,14 @@
+// Eventos
 window.addEventListener("load", function (event) {
 }, false);
+
 element.onchange = function () { }
 element.onclick = () => { }
+setTimeout(function () {
+    window.location.href = window.location.origin + '/public/firmar_documentos/';
+}, 3000);
 
-function emptyStr($var) {
-    return $var !== null && $var !== undefined && $var !== '';
-}
-
+// obtener los argumentos pasados a la función
 function foo('uno', 'dos') {
     console.log(arguments);// ['uno', 'dos']
 }
@@ -25,14 +27,16 @@ for (const [k, v] of Object.entries(parametros)) {
     console.log('k:', k, ' v:', v);
 }
 
-// for (const pair of formData.entries()) {
-//     console.log(pair[0], ' : ', pair[1]);
-// }
+for (const pair of formData.entries()) {
+    console.log(pair[0], ' : ', pair[1]);
+}
+
 for (const [k, v] of formData.entries()) {
     console.log('k:', k, ' v:', v);
 }
 
-select.options[select.selectedIndex].text
+// Obtener el texto de un <select> correspondiente a la selección actual
+let opt = select.options[select.selectedIndex].text;
 
 // Sumar un arreglo en una linea
 console.log([1, 2, 3].reduce((accumulator, current) => accumulator + current, 0));
@@ -43,126 +47,99 @@ element.style.margin = '0';
 element.style.color = "red";
 element.style.cssText = 'width: 100px; height: 100px; background: #afafaf';
 
-// FUNCIONES
+// Atributos de datos
 document.getElementById().dataset.miParametro = 'Hello world!';
 document.getElementById().getAttribute('data-mi-parametro');
 
-// selectores
-document.querySelector('input[data-id-producto-cobertura="1"]');//:last-child
+// Selectores
+document.querySelector('input[data-id-producto-cobertura="1"]'); //:last-child
 document.querySelector('input[name="rut_titular"]');
 document.querySelector('input[type=checkbox]');
-elemento.closest("tr");// encuentra el ancestro mas cercano
+elemento.closest("tr"); // encuentra el ancestro mas cercano
 
-element.classList.contains('mi-class');// comprueba si un objeto contiene una clase
+// Estilos CSS
+element.className = "form-control";
+element.style.margin = '0';
+element.style.color = "red";
+element.style.cssText = 'width: 100px; height: 100px; background: #afafaf';
+element.classList.contains('mi-class'); // comprueba si un objeto contiene una clase
+element.classList.toggle("mi-class"); // comprueba si el elemento contiene la clase, en caso afirmativo la elimina o la crea para el caso contrario
+element.classList.add("miClase");
+element.classList.remove("miClase");
 
-element.classList.toggle("mi-class");// comprueba si el elemento contiene la clase, en caso afirmativo la elimina o la crea para el caso contrario
+// Funciones equivalentes con PHP
+// in_array() comprueba si un elemento existe dentro de un arreglo
+const array = ['manzana', 'naranja', 'pera'];
+if (array.includes('naranja')) {
+    console.log('La naranja está en el array');
+}
+// strpos() comprueba si una cadena existe dentro de otra cadena
+if (cadena.indexOf(subcadena) !== -1) {
+    console.log('La subcadena ' + subcadena + ' está presente en la cadena ' + cadena);
+}
+// empty()
+function empty(valor) {
+    return (valor == null || valor === '' || valor === 0 || valor === false || valor === undefined);
+}
 
+function isEmptyArray(arr) {
+    return arr.length === 0;
+}
 
-// comprueba si una propiedad existe en un objeto
-obj.has
-OwnProperty('propiedad')
+function emptyStr($var) {
+    return $var !== null && $var !== undefined && $var !== '';
+}
 
-// devuelve la cantidad de propiedades de un objeto
-Object.keys(parametros).length
+// OBJETOS
+// Comprueba si una propiedad existe en un objeto
+obj.hasOwnProperty('propiedad');
+
+// Devuelve la cantidad de propiedades de un objeto
+Object.keys(parametros).length;
 
 // Copia objeto por valor ya que por defecto en javascript los objetos se copian por referencia.
 let newObj = Object.assign({}, obj);// problemas cuando contiene sub-objetos
-// solucion definitiva
+// solución definitiva
 let newObj2 = JSON.parse(JSON.stringify(obj));
 
 // Agrega un nuevo parametro al objeto
 Object.assign(obj, { key: value });
 
-// forzar convercion a entero
-miEntero = !isNaN(miNumero) ? parseInt(miNumero) : 0;
-miEntero = is_numeric(miNumero) ? (int)miNumero: 0;// PHP equivalent
-// Subrutina parsear objetos javascript
+// Generar un arreglo a partir de claves o valores de un objeto
 const person = { firstName: 'John', lastName: 'Doe' };
 const propertyNames = Object.keys(person);// [ 'firstName', 'lastName' ]
 const propertyValues = Object.values(person);// [ 'John', 'Doe' ]
 
+// ARREGLOS
+// Invertir array
+console.log(['one', 'two', 'three']); // expected output: Array ["one", "two", "three"]
+console.log(['one', 'two', 'three'].reverse()); // expected output:Array ["three", "two", "one"]
+'31-12-2000'.substr(0, 10).split('-').reverse().join('-');// 2000-12-31
 
-// convierte una cadena en nodos 
+// STRING FUNCTIONS 
+'cadena'.toLowerCase();
+'cadena'.toUpperCase();
+
+//Purga todos los 0 al inicio de una cadena y reemplaza todos los . por nada
+str.replaceAll('.', '').replace(/^0+/, '');
+
+// reemplaza algunos caracteres especiales de html
+str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+// CAST Y PARSEO
+// forzar conversion a entero
+miEntero = !isNaN(miNumero) ? parseInt(miNumero) : 0;
+miEntero = is_numeric(miNumero) ? (int)miNumero: 0;// PHP equivalent
+
+// Convierte una cadena en nodos
 var xmlString = "<div id='foo'><a href='#'>Link</a><span></span></div>";
 var doc = new DOMParser().parseFromString(xmlString, "text/xml");
 
-
-// invertir array
-console.log(['one', 'two', 'three']);// expected output: Array ["one", "two", "three"]
-console.log(['one', 'two', 'three'].reverse());// expected output:Array ["three", "two", "one"]
-
+// STORAGE
 let page = localStorage.getItem('page') ?? 0;
 localStorage.setItem('page', 10);
 console.log('page :>> ', page);
 
-fecha.substr(0, 10).split('-').reverse().join('-');
+// EXPRESIONES REGULARES
 /^\d{4}-\d{2}-\d{2}$/.test('2022-01-01'); // return true o false
 let partes = fecha.match(/^(\d{2})-(\d{2})-(\d{4})$/g);// Un Array cuyo contenido depende de la presencia de la bandera global (g), o null si no se encuentran coincidencias.
-// STRING FUNCTIONS 
-'cadena'.toLowerCase();
-'cadena'.toUpperCase();
-str.toLowerCase().replaceAll('.', '').replaceAll('-', '').replace(/^0+/, '');
-
-setTimeout(function () {
-    window.location.href = window.location.origin + '/public/firmar_documentos/';
-    // window.location.href = 'www.google.com';
-}, 3000);
-
-
-let radData = 'My NaMe Is MuD';
-radData.toLowerCase();
-radData.toUpperCase();
-
-.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-
-// MomentsJS
-let f = moment('2022-01-01', "YYYYMMDD");
-console.log(f.format('DD-MM-YYYY'));
-moment(fecha, "YYYYMMDD").isValid()
-let fecha1 = moment('2022-01-01', 'YYYY-MM-DD', true);
-let fecha2 = moment('01-01-2000', 'DD-MM-YYYY', true);
-let diferencia = fecha1.diff(fecha2, "years");
-
-// Parsley
-$('#carga_fecha_nacimiento').attr('data-parsley-errors-messages-disabled', true);
-
-// Select
-let opt = select.options[select.selectedIndex];
-console.log(opt.text);
-//HTML
-'<option value="-1" selected disabled hidden>Seleccione una opción</option>'
-    // evitar que el modal se cierre al hacer click fuera
-    < div class="modal fade" id = "cargas_modal" data - backdrop="static" >
-
-
-        echo '<pre>';
-print_r($dataDetalle);
-echo '</pre>';
-return;
-
-$this -> load -> database('IAXIS, TRUE);
-$this -> load -> model('IAXIS_WR/CsSinObligaciones');
-
-
-
-
-<? php
-$start = new DateTime('2023-02-01');
-$end = new DateTime('2023-03-01');
-$interval = new DateInterval('P1D'); // intervalo de un día
-$range = new DatePeriod($start, $interval, $end -> modify('+1 day'));
-
-$dates = array_map(function ($date) {
-    return $date -> format('Y-m-d');
-}, iterator_to_array($range));
-
-print_r($dates);
-?>
-
-    /* CSS  */
-    /* evita que las palabras se rompan en cualquier partes         */
-    white - space: normal;
-word -break: normal;
-
-/* corta y muestra 3 puntos cuando la palabra sobrepasa el borde del contenedor*/
-text - overflow: ellipsis;
