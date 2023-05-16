@@ -1,3 +1,9 @@
+'use strict' // Para habilitar el modo estricto en una función o en todo un archivo, se puede utilizar la cadena "use strict" 
+
+// Tanto call() como apply() son métodos en JavaScript que se utilizan para llamar a una función y establecer su contexto this explícitamente
+var resultado = saludar.call(null, 'Hola', 'Juan');
+var resultado = sumar.apply(null, valores);
+
 // Eventos
 window.addEventListener("load", function (event) {
 }, false);
