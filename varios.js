@@ -59,6 +59,7 @@ document.getElementById().getAttribute('data-mi-parametro');
 
 // Selectores
 const $ = document.querySelector.bind(document);
+document.querySelector('select option:selected).text;
 document.querySelector('input[data-id-producto-cobertura="1"]'); //:last-child
 document.querySelector('input[name="rut_titular"]');
 document.querySelector('input[type=checkbox]');
