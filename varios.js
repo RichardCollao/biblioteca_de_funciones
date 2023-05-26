@@ -13,7 +13,11 @@ element.onclick = () => { }
 setTimeout(function () {
     window.location.href = window.location.origin + '/public/firmar_documentos/';
 }, 3000);
-
+document.getElementById('elemento').onchange = (event) => {
+    let el = event.currentTarget;
+    console.log('valor :>> ', el.value);
+}
+        
 // obtener los argumentos pasados a la función
 function foo('uno', 'dos') {
     console.log(arguments);// ['uno', 'dos']
