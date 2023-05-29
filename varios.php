@@ -21,3 +21,13 @@ $str = preg_replace('/[^0-9]/', '', $str);
 
 // Invertir array
 array_reverse(['uno', 'dos', 'tres']);
+
+
+// ERRORES
+try {
+    // Código que podría generar un error
+} catch (Exception $e) {
+    echo 'Error en linea:' . $e->getLine() . ' - ' . $e->getMessage();
+}
+    
+    
