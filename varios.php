@@ -30,5 +30,12 @@ try {
     echo 'Error en linea:' . $e->getLine() . ' - ' . $e->getMessage();
 }
 
-$hash = bin2hex(random_bytes(18));
+// STRINGS
+strtoupper() - Convierte un string a mayúsculas
+strtolower() - Convierte un string a minúsculas
+ucfirst() - Convierte el primer caracter de una cadena a mayúsculas
+ucwords() - Convierte a mayúsculas el primer caracter de cada palabra de una cadena
+
     
+$hash = bin2hex(random_bytes(18));
+
