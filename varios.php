@@ -12,6 +12,10 @@ function createDateRange($start, $end)
 }
 
 print_r(createDateRange('2023-02-01', '2023-03-01'));
+// FECHAS
+$fecha = DateTime::createFromFormat('d/m/Y', '31/05/2023');// crea un OBJETO con la fecha indicada
+$fecha->format('d/m/Y');// devuel un string segun el formato indicado
+date('Y-m-d H:i:s'); // devuelve un STRING con la fecha
 
 // Obtener variable de entorno en CI4
 getenv('app.baseURLBack');
