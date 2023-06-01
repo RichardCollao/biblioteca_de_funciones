@@ -16,3 +16,16 @@ function isEmpty(value) {
   }
   return false;
 }
+
+// Blockear select a falta de readOnly
+function lockSelect(id, option) {
+  document.querySelectorAll(`#${id} option`).forEach(option => option.disabled = true);
+  document.querySelector(`#${id} option[value="${option}"]`).disabled = false;
+  document.getElementById(id).value = option;
+  document.getElementById(id).style.backgroundColor = '#f6f6ff';
+}
+
+function unlockSelect(id) {
+  document.querySelectorAll(`#${id} option`).forEach(option => option.disabled = false);
+  document.getElementById(id).style.backgroundColor = 'white';
+}
