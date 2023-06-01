@@ -1,2 +1,3 @@
-SELECT TO_DATE('01/06/2023', 'dd/mm/yyyy') - INTERVAL '6' MONTH AS resultado FROM dual;
-SELECT DISTINCT columna FROM()
+SELECT TO_DATE('01/06/2023', 'dd/mm/yyyy') - INTERVAL '6' MONTH AS result FROM dual;
+SELECT DISTINCT column FROM()
+SELECT * FROM table WHERE column IS NOT NULL;
