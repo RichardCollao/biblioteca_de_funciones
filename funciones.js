@@ -1,3 +1,5 @@
+// Funciones standar que aplican a cualquier proyecto
+
 function isEmpty(value) {
   if (typeof value === 'undefined' || value === null) {
     return true;
