@@ -14,3 +14,7 @@ div {
     /* Previene que el contenido del div se corte entre saltos de pagina en un PDF */
     display: table;
 }
+
+element-selector {
+  text-transform: uppercase;//  lowercase, capitalize
+}
