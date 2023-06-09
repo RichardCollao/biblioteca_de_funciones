@@ -131,6 +131,10 @@ console.log(['one', 'two', 'three'].reverse()); // expected output:Array ["three
 // STRING FUNCTIONS 
 'cadena'.toLowerCase();
 'cadena'.toUpperCase();
+const iterableObject = ;
+
+// Convertir el objeto iterable en un array
+console.log(Array.from('string'); // ['s', 't', 'r', 'i', 'n', 'g']
 
 //Purga todos los 0 al inicio de una cadena y reemplaza todos los . por nada
 str.replaceAll('.', '').replace(/^0+/, '');
