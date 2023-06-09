@@ -11,15 +11,18 @@ SELECT DISTINCT column FROM()
 SELECT * FROM table WHERE column IS NOT NULL;
 
 DELETE FROM myTable;
-TRUCATE TABLE myTable;// borra todos los registros y resetea el valor del campo autoincrementable
-DBCC CHECKIDENT ('myTable', RESEED, 1000);// setea el valor autoincrementable
+TRUCATE TABLE myTable;-- borra todos los registros y resetea el valor del campo autoincrementable
+DBCC CHECKIDENT ('myTable', RESEED, 1000);-- setea el valor autoincrementable
 
 IF OBJECT_ID('myTable', 'U') IS NOT NULL
     DROP TABLE flow_customer;
-
+-- insertar datos inluyendo la clave primaria
 SET IDENTITY_INSERT myTable ON 
 INSERT INTO ...
 SET IDENTITY_INSERT myTable OFF
+
+-- castear fechas (util para filtros de fechas)
+cast(campo_date_time as date) 
 
 DATEADD(DAY, -1, CONVERT(DATE, '2023-06-05', 120))
 Code |   Result
