@@ -1,3 +1,9 @@
+SELECT column1, column2 FROM table_name WHERE condition;
+UPDATE table_name SET column1 = value1, column2 = value2 WHERE condition;
+INSERT INTO table_name (column1, column2, column3) VALUES (value1, value2, value3)
+DELETE FROM table_name WHERE condition;
+
+
 SELECT UPPER('hello') AS Resultado;-- Resultado: "HELLO"
 SELECT LOWER('WORLD') AS Resultado;-- Resultado: "world"
 
