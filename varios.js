@@ -48,9 +48,6 @@ for (const [k, v] of formData.entries()) {
 // Obtener el texto de un <select> correspondiente a la selección actual
 let opt = select.options[select.selectedIndex].text;
 
-// Sumar un arreglo en una linea
-console.log([1, 2, 3].reduce((accumulator, current) => accumulator + current, 0));
-
 // CSS
 element.className = "form-control";
 element.style.margin = '0';
@@ -89,18 +86,6 @@ if (array.includes('naranja')) {
 if (cadena.indexOf(subcadena) !== -1) {
     console.log('La subcadena ' + subcadena + ' está presente en la cadena ' + cadena);
 }
-// empty()
-function empty(valor) {
-    return (valor == null || valor === '' || valor === 0 || valor === false || valor === undefined);
-}
-
-function isEmptyArray(arr) {
-    return arr.length === 0;
-}
-
-function emptyStr($var) {
-    return $var !== null && $var !== undefined && $var !== '';
-}
 
 // OBJETOS
 // Comprueba si una propiedad existe en un objeto
@@ -127,6 +112,13 @@ const propertyValues = Object.values(person);// [ 'John', 'Doe' ]
 console.log(['one', 'two', 'three']); // expected output: Array ["one", "two", "three"]
 console.log(['one', 'two', 'three'].reverse()); // expected output:Array ["three", "two", "one"]
 '31-12-2000'.substr(0, 10).split('-').reverse().join('-');// 2000-12-31
+
+// Sumar un arreglo en una linea
+console.log([1, 2, 3].reduce((accumulator, current) => accumulator + current, 0));
+// Aplicar funciones a un arreglo
+arreglo.map(elemento => elemento.trim());
+
+
 
 // STRING FUNCTIONS 
 'cadena'.toLowerCase();
