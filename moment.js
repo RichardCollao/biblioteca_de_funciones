@@ -1,4 +1,4 @@
-
+// moment esta depreciado se recomienta usar otras librerias como: date-fns, Day, Luxon, etc
 let f = moment('2022-01-01', "YYYYMMDD");
 console.log(f.format('DD-MM-YYYY'));
 moment(fecha, "YYYYMMDD").isValid()
