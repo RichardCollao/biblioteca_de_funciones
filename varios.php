@@ -26,6 +26,16 @@ $str = preg_replace('/[^0-9]/', '', $str);
 // Invertir array
 array_reverse(['uno', 'dos', 'tres']);
 
+// verifica si una fecha es valida tanto en formato como siexiste
+function validarFecha($fecha) {
+    if (!preg_match('/^\d{4}-\d{2}-\d{2}$/', $fecha)) {
+        return false; // El formato no es válido
+    }
+    $componentes = explode('-', $fecha);
+    return checkdate($componentes[1], $componentes[2], $componentes[0]));
+}
+
+
 
 // ERRORES
 try {
