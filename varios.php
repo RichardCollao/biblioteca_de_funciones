@@ -32,7 +32,7 @@ function validarFecha($fecha) {
         return false; // El formato no es válido
     }
     $componentes = explode('-', $fecha);
-    return checkdate($componentes[1], $componentes[2], $componentes[0]));
+    return checkdate($componentes[1], $componentes[2], $componentes[0]);
 }
 
 
