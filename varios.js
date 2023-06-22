@@ -138,6 +138,8 @@ str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/
 // forzar conversion a entero
 miEntero = !isNaN(miNumero) ? parseInt(miNumero) : 0;
 miEntero = is_numeric(miNumero) ? (int)miNumero: 0;// PHP equivalent
+Number.parseFloat(item.total_uf_neta).toFixed(4);// limita la cantidad de decimales
+
 
 // Convierte una cadena en nodos
 var xmlString = "<div id='foo'><a href='#'>Link</a><span></span></div>";
