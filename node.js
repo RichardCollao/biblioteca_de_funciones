@@ -35,4 +35,6 @@ npm update
 npm install webpack-node-externals --save-dev
 // cargador de CSS para webpack
 npm install css-loader style-loader --save-dev
+// 
+npm install mini-css-extract-plugin --save-dev
 
