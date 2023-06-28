@@ -29,6 +29,9 @@ npm uninstall nombre-libreria
 
 // actualiza las dependencias
 npm update
+#NPM INSTALLS
+// motor de plantillas EJS:
+npm install ejs
 
 #NPM_PLUGINS
 // 
