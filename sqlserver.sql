@@ -47,7 +47,12 @@ Code |   Result
  130 |   dd mon yyyy hh:mi:ss:mmmAM
  131 |   dd/mm/yyyy hh:mi:ss:mmmAM
 
+-- VARIOS
+-- crea un archivo csv con el resultado de la consulta
+bcp "SELECT * FROM Cot_DB_CS_PROD.dbo.cot_lineas" queryout "C:\Users\solutocs\Desktop\out\archivo.csv" -c -t, -S servidor -U usuario -P contraseña
 
+-- crea un archivo csv con el resultado de la consulta
+bcp "SELECT columna1, columna2, columna3 FROM tuTabla FOR JSON PATH" queryout "C:\ruta\archivo.json" -c -S servidor -U usuario -P contraseña
 
 
 
