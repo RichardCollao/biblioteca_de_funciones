@@ -32,6 +32,8 @@ npm update
 #NPM INSTALLS
 // motor de plantillas EJS:
 npm install ejs
+npm install --save-dev babel-plugin-transform-remove-comments
+
 
 #NPM_PLUGINS
 // 
