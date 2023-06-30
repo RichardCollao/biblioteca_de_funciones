@@ -31,3 +31,11 @@ function unlockSelect(id) {
   document.querySelectorAll(`#${id} option`).forEach(option => option.disabled = false);
   document.getElementById(id).style.backgroundColor = 'white';
 }
+
+function poblarSelect(items){
+  let select = document.querySelector('#mySelect');
+  let options = items.map(item => `<option value="${item.usu_id}">${item.usu_nombre}</option>`);
+  options.unshift(`<option value="-1" selected>Todos</option>`);
+  select.innerHTML = options.join('\n');
+  select.disabled = select.length > 1 ? false : true;
+}
