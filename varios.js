@@ -134,6 +134,9 @@ str.replaceAll('.', '').replace(/^0+/, '');
 // reemplaza algunos caracteres especiales de html
 str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
+// Convierte un objeto en un string
+JSON.stringify({ uno: 1, dos: 2 }, null, "\t")
+
 // CAST Y PARSEO
 // forzar conversion a entero
 miEntero = !isNaN(miNumero) ? parseInt(miNumero) : 0;
