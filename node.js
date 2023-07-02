@@ -32,7 +32,9 @@ npm update
 #NPM INSTALLS
 // motor de plantillas EJS:
 npm install ejs
-npm install --save-dev babel-plugin-transform-remove-comments
+
+// monitorear los archivos de tu proyecto y reinicia automáticamente el servidor cuando se detectan cambios. nodemon server.js
+npm install -g nodemon
 
 
 #NPM_PLUGINS
