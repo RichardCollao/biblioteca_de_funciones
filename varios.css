@@ -19,7 +19,7 @@ element-selector {
   text-transform: uppercase;//  lowercase, capitalize
 }
 
-/* Evita que las filas en conjunto sobrepasen el tamaño de la tabla */
+/* Evita que las celdas sobrepasen el tamaño de la columna */
 .custom-datatable td {
     text-overflow: ellipsis;
     overflow: hidden;
