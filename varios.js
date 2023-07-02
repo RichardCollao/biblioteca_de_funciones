@@ -123,7 +123,6 @@ arreglo.map(elemento => elemento.trim());
 // STRING FUNCTIONS 
 'cadena'.toLowerCase();
 'cadena'.toUpperCase();
-const iterableObject = ;
 
 // Convertir el objeto iterable en un array
 console.log(Array.from('string'); // ['s', 't', 'r', 'i', 'n', 'g']
