@@ -18,3 +18,11 @@ div {
 element-selector {
   text-transform: uppercase;//  lowercase, capitalize
 }
+
+/* Evita que las filas en conjunto sobrepasen el tamaño de la tabla */
+.custom-datatable td {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    word-break: break-all;
+}
