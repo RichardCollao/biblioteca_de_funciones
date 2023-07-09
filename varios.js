@@ -118,7 +118,8 @@ console.log([1, 2, 3].reduce((accumulator, current) => accumulator + current, 0)
 // Aplicar funciones a un arreglo
 arreglo.map(elemento => elemento.trim());
 
-
+// Verifica si al menos un elemento de una matriz (array) cumple una condición específica
+const exist = arreglo.some(item => item.param === algo);
 
 // STRING FUNCTIONS 
 'cadena'.toLowerCase();
