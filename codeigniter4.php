@@ -8,3 +8,7 @@ log_message('debug', $sql . PHP_EOL);
 
 // 
 Services::logger()->info('Este es un mensaje de información');
+
+
+// Obtener variable de entorno en CI4
+getenv('app.baseURLBack');
